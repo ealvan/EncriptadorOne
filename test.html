@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My encriptador</title>
+        <style>
+            main{
+                display: flex;
+                justify-content: center;
+                flex-direction: center;
+            }
+            .padre{
+                width: 600px;
+                height: 600px;
+                background-color: gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-end;
+            }
+            .child{
+                width: 14%;
+                height: 14%;
+                background-color: blue;
+            }
+            .child:nth-child(2n){
+                background-color: teal;
+                align-self: center;
+                order:1;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <div class="padre">
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>
