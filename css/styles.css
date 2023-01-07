@@ -134,3 +134,65 @@ main{
     font-size: 0.8em;
     text-align: center;
 }
+
+@media screen and (max-width: 480px) {
+    body {
+      font-size: 20px;
+      color: darkblue;
+    }
+    main{
+        display: inline-block;
+        /* flex-direction: row;
+        justify-content:space-around; */
+    }
+    .logo{
+        vertical-align: top;
+        height: 90px;
+        margin: 0 1em;
+    }
+    .main-content{
+         display: inline-block;
+         margin-left: 1em;
+    }
+    .card{
+        margin-top: 1em;
+        margin-right: auto;
+        margin-left: auto;
+        width: 12em;
+    }
+    .card #image{
+        display: none;
+    }
+    .main-title{
+        font-size: 2em;
+    }
+    #encrypted-text{
+        font-size: 0.7em;
+        
+    }
+    .logo{
+        display: inline-block;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .info-input{
+        display: flex;
+        flex-direction: center;
+        justify-content: center;
+        width: 4em;
+    }
+    #notification{
+        align-self: flex-start;
+        font-size: 10px;
+    }
+    .header {
+      display: block;
+    }
+    .mybuttons{
+        font-size: 0.7em;
+    }
+    .copy-button{
+        font-size: 16px;
+    }
+}

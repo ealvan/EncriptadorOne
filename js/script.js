@@ -78,10 +78,22 @@ function changeCard(card,encrypted){
     //items needed -> a textarea and a button 
     const textarea = document.createElement("textarea");
     const button = document.createElement("button");
-
+    
     textarea.innerHTML=encrypted;
-    textarea.setAttribute("width","80%");
-    textarea.setAttribute("rows",15);
+    //Styles with Responsive Design
+    
+    if( window.innerWidth <= 480){
+        // textarea.setAttribute("width","100%");
+        textarea.style.height = (1.1*encrypted.length) + "px";
+         
+        // textarea.setAttribute("height","auto");
+        // textarea.setAttribute("overflow-y", "visible");
+    }else{
+        textarea.setAttribute("width","80%");
+        textarea.setAttribute("rows",15);
+        
+    }
+    
     textarea.setAttribute("id","encrypted-text");
     
     textarea.classList.add("general-textarea");
@@ -104,7 +116,10 @@ function decrypt_process(event){
         alert("You had not a message to decrypt or encrypt in the input text");
         return;
     }
-
+    if( window.innerWidth <= 480){
+        // textarea.setAttribute("width","100%");
+        encrypted_text.style.height = (1.1*encrypted_text.value.length) + "px";
+    }
     let encryptedText = encrypted_text.value;
     let decryptedText = encryptedText;
     for(const entry of Object.entries(mydictionary)){
