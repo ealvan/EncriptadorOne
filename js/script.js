@@ -84,14 +84,18 @@ function changeCard(card,encrypted){
     
     if( window.innerWidth <= 480){
         // textarea.setAttribute("width","100%");
-        textarea.style.height = (1.1*encrypted.length) + "px";
-         
+        textarea.style.height = (1.4*(encrypted.length)) + "px";
+        textarea.style.fontSize="0.7em";
+        textarea.style.width="90%";
+        button.style.fontSize="0.8em";
+        button.style.height="1.7em";
+        button.style.marginTop="15px";
         // textarea.setAttribute("height","auto");
         // textarea.setAttribute("overflow-y", "visible");
     }else{
-        textarea.setAttribute("width","80%");
+        textarea.style.width="80%";
         textarea.setAttribute("rows",15);
-        
+        textarea.style.fontSize="1.2em";
     }
     
     textarea.setAttribute("id","encrypted-text");
@@ -100,7 +104,19 @@ function changeCard(card,encrypted){
 
     button.innerHTML="Copiar";
     button.classList.add("copy-button");
-
+    button.style.cursor = "pointer";
+    button.style.transition="background-color 300ms linear";
+    button.addEventListener("mouseenter",function(event){
+        this.style.backgroundColor = "darkblue";
+        this.style.color="azure";
+        this.style.fontSize ="1.4em";
+    });
+    button.addEventListener("mouseleave",function(event){
+        this.style.backgroundColor = "#D8DFE8";
+        this.style.color="darkblue";
+        this.style.fontSize ="1.1em";
+    });
+    
     card.appendChild(textarea);
     card.appendChild(button);
 
